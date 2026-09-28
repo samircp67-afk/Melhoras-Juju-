@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Júlia — um desejo de melhoras</title>
+<meta name="theme-color" content="#12000b">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&display=swap');
+:root{--white:#fff7fb;--muted:#d8c9d2;--purple:#a64cff;--violet:#5b19a9;--red:#d30b36;--red2:#ff2c54;--black:#080006}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#090007;color:var(--white);font-family:"Cormorant Garamond",Georgia,serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-5;background:linear-gradient(180deg,#10000b99,#160019b8 45%,#090006e8),url("https://images.pexels.com/videos/29920181/pexels-photo-29920181.jpeg?auto=compress&dpr=1&h=1500&w=2400") center/cover fixed;filter:saturate(1.35) contrast(1.2);transform:scale(1.04)}
+body:after{content:"";position:fixed;inset:0;z-index:-4;background:radial-gradient(ellipse at 50% 12%,#ff16352d,transparent 35%),radial-gradient(ellipse at 50% 95%,#7c1cff32,transparent 45%),linear-gradient(90deg,#11000677,#ff0b3215 50%,#11000677);pointer-events:none}
+.noise{position:fixed;inset:0;z-index:20;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vines{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.28;background:
+radial-gradient(ellipse at 12% 30%,transparent 0 22%,#21000f 23% 23.2%,transparent 23.5%),
+radial-gradient(ellipse at 90% 70%,transparent 0 24%,#26000f 24.2% 24.5%,transparent 25%),
+linear-gradient(105deg,transparent 0 34%,#2a0012 34.2% 34.5%,transparent 35%),
+linear-gradient(75deg,transparent 0 67%,#2a0012 67.2% 67.5%,transparent 68%);
+filter:blur(2px)}
+.bg-suns{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bg-suns span{position:absolute;font-size:clamp(1.2rem,3vw,2.5rem);opacity:.18;filter:drop-shadow(0 0 9px #ffcf37);animation:sway 7s ease-in-out infinite}
+.bg-suns span:nth-child(1){left:4%;top:12%}.bg-suns span:nth-child(2){left:15%;top:58%;animation-delay:-2s}.bg-suns span:nth-child(3){right:7%;top:20%;animation-delay:-4s}.bg-suns span:nth-child(4){right:15%;top:64%;animation-delay:-1s}.bg-suns span:nth-child(5){left:30%;top:82%;animation-delay:-3s}.bg-suns span:nth-child(6){right:34%;top:8%;animation-delay:-5s}.bg-suns span:nth-child(7){left:68%;top:42%;animation-delay:-2.5s}.bg-suns span:nth-child(8){left:1%;top:88%;animation-delay:-4.5s}
+@keyframes sway{50%{transform:translateY(-8px) rotate(4deg);opacity:.25}}
+.wrap{width:min(1040px,90vw);margin:auto}.mono{font:500 .63rem "DM Mono",monospace;letter-spacing:.18em;text-transform:uppercase;color:#d2c0cd}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:40px 0}
+.hero-inner{position:relative;z-index:2}.hero .flower{font-size:2.5rem;filter:drop-shadow(0 0 17px #ffd83d);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px)}}
+.hero h1{font-size:clamp(7rem,25vw,17rem);line-height:.68;margin:28px 0 35px;font-weight:600;letter-spacing:.04em;text-shadow:0 0 20px #9f43ff55,0 0 75px #ff174433}
+.hero .subtitle{max-width:610px;margin:auto;font-size:1.15rem;line-height:1.7;color:#e0d2da}
+.btn{display:inline-flex;align-items:center;justify-content:center;margin-top:38px;min-width:190px;padding:15px 25px;border:1px solid #d6a9ff88;border-radius:8px;color:#fff;text-decoration:none;background:linear-gradient(135deg,#8d2dff55,#ff164b33);box-shadow:0 0 30px #7c2cff22,inset 0 0 18px #fff1;transition:.3s;letter-spacing:.04em}.btn:hover{transform:translateY(-3px);box-shadow:0 0 42px #a53cff55}
+.section{padding:115px 0}.letter{border-top:1px solid #ffffff24;padding-top:28px;max-width:850px}.paper{max-width:730px;margin-left:auto}.paper .label{font:500 .65rem "DM Mono";letter-spacing:.15em;text-transform:uppercase;color:#c8b1ce}.paper h2{font-size:clamp(3rem,7vw,5.5rem);line-height:.92;margin:28px 0 38px;font-weight:600}.paper p{font-size:1.27rem;line-height:1.67;color:#eee4e9;margin:0 0 25px}.drop:first-letter{font-size:4.8rem;float:left;line-height:.75;padding:.08em .12em 0 0;color:#b45dff;text-shadow:0 0 22px #a52dff77}.sig{margin-top:45px;color:#cbb9c4;font-size:1.05rem}.sig strong{display:block;color:#fff;font-size:1.35rem;margin-top:6px}
+.vibe{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.vibe-copy{border:1px solid #ffffff20;background:#0d020caa;backdrop-filter:blur(7px);padding:42px;min-height:460px;display:flex;flex-direction:column;justify-content:center}.vibe-copy h3{font-size:clamp(2.5rem,5vw,4rem);line-height:.95;margin:15px 0 22px}.vibe-copy p{font-size:1.22rem;line-height:1.6;color:#ddcdd5}.sun{font-size:2rem;filter:drop-shadow(0 0 13px #ffd83d)}.tiny{margin-top:25px;color:#a894a2}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photo{margin:0;position:relative;overflow:hidden;background:#160611}.photo:first-child{grid-column:span 2;height:310px}.photo:not(:first-child){height:210px}.photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.08);transition:.7s}.photo:hover img{transform:scale(1.05);filter:saturate(1) contrast(1.1)}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#090006cc)}.photo figcaption{position:absolute;z-index:2;bottom:12px;left:12px;font:400 .54rem "DM Mono";letter-spacing:.08em;color:#fff}
+.ariana-note{margin:20px 0 0;color:#d8c6d2;font-size:1.05rem;line-height:1.5;text-align:center}
+.end{text-align:center;padding:30px 0 90px}.end-box{border:1px solid #ffffff20;padding:65px 25px;background:#0d020dcc;backdrop-filter:blur(8px)}.end h2{font-size:clamp(4rem,10vw,7rem);line-height:.82;margin:18px 0}.end p{font-size:1.17rem;color:#c9b8c3;max-width:600px;margin:auto;line-height:1.6}.icons{font-size:1.5rem;margin-top:28px}
+.chest-wrap{text-align:center;padding:25px 0 95px}.chest{width:145px;height:112px;border:2px solid #c18cff;border-radius:16px 16px 10px 10px;background:linear-gradient(145deg,#32105a,#12051d);box-shadow:0 0 35px #8e36ff55, inset 0 0 25px #a64cff33;cursor:pointer;position:relative;transition:.3s}.chest:before{content:"";position:absolute;left:0;right:0;top:-35px;height:48px;border:2px solid #c18cff;border-bottom:0;border-radius:25px 25px 0 0;background:linear-gradient(145deg,#431375,#170722);transform:perspective(300px) rotateX(-8deg);transform-origin:bottom}.chest:after{content:"🔒";position:absolute;left:50%;top:43px;transform:translateX(-50%);font-size:1.5rem}.chest:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 0 55px #a64cff88}.chest small{position:absolute;top:125px;left:50%;transform:translateX(-50%);font:400 .52rem "DM Mono";color:#8d778e;white-space:nowrap}
+.modal{position:fixed;inset:0;z-index:50;background:#050004dd;backdrop-filter:blur(14px);display:none;place-items:center;padding:20px}.modal.open{display:grid}.lockbox{width:min(440px,92vw);background:linear-gradient(145deg,#1d0929,#0d020e);border:1px solid #c18cff66;padding:35px;border-radius:20px;box-shadow:0 0 70px #8e36ff44;text-align:center}.lockbox h3{font-size:2rem;margin:0 0 18px}.lockbox input{width:100%;padding:15px;border:1px solid #ffffff22;background:#070208;color:#fff;border-radius:10px;outline:none;font:500 .9rem "DM Mono";text-align:center}.lockbox input:focus{border-color:#bd76ff}.unlock{margin-top:15px;width:100%;padding:14px;border:0;border-radius:10px;background:linear-gradient(90deg,#8b35e8,#d01c52);color:#fff;font-weight:700;cursor:pointer}.error{height:20px;color:#ff8da3;font:400 .7rem "DM Mono";margin-top:10px}.secret{display:none;padding:80px 0 130px}.secret.show{display:block}.secret-card{border:1px solid #c18cff55;background:linear-gradient(145deg,#16051e,#090007);padding:clamp(28px,6vw,75px);box-shadow:0 0 80px #7c2cff22}.secret-card h2{font-size:clamp(3rem,8vw,6rem);line-height:.88;margin:20px 0 40px}.secret-card p{font-size:1.3rem;line-height:1.75;color:#eee1e9;white-space:pre-line}
+footer{text-align:center;padding:25px;color:#705d70;font:400 .54rem "DM Mono";letter-spacing:.12em}
+@media(max-width:760px){.vibe{grid-template-columns:1fr}.paper{margin:0}.section{padding:85px 0}.vibe-copy{padding:30px}.photo:first-child{height:260px}.photo:not(:first-child){height:180px}}
+</style>
+</head>
+<body>
+<div class="noise"></div><div class="vines"></div>
+<div class="bg-suns"><span>🌻</span><span>🌻</span><span>🌻</span><span>🌻</span><span>🌻</span><span>🌻</span><span>🌻</span><span>🌻</span></div>
+
+<section class="hero">
+<div class="wrap hero-inner">
+ <div class="flower">🌻</div>
+ <div class="mono">Um desejo de melhoras</div>
+ <h1>Júlia</h1>
+ <p class="subtitle">Fiz esse site para te lembrar que você faria falta Sim pra muitas pessoas e que você é importante sim,Espero que tudo isso passe,Eu estou aqui com você se precisar!</p>
+ <a class="btn" href="#carta">Abrir minha carta</a>
+</div>
+</section>
+
+<section class="section" id="carta">
+<div class="wrap letter"><article class="paper">
+ <div class="label">para você, Júlia</div>
+ <h2>Hoje eu só queria te desejar dias mais felizes.</h2>
+ <p class="drop">Eu sei que nem todo dia é fácil. Às vezes você acorda querendo que o mundo simplesmente acabe para você, porque já tem coisa demais acontecendo com você.</p>
+ <p>Então não quero escrever um texto gigante com um monte de palavras,mas sim um texto que expresse oq eu quero te passar. Só quero que você Se cuide,sua saúde é bastante importante e eu tenho certeza que muitas pessoas se importam sim com você.</p>
+ <p>Que isso passe de uma vez,Que venham notícias boas, noites mais tranquilas e manhãs em que você acorde se sentindo um pouco melhor que no dia anterior.</p>
+ <p>espero que perceba que aquilo que te incomoda tanto, fique para trás.</p>
+ <div class="sig">Com carinho,<strong>alguém torcendo por você. ♡<br>Melhoras❤️</strong></div>
+</article></div>
+</section>
+
+<section class="section">
+<div class="wrap">
+ <div class="vibe">
+  <div class="vibe-copy"><span class="sun">🌻</span><div class="mono">um lembrete</div>
+   <h3>Sei que não vai melhorar tudo hoje.</h3>
+   <p>Mas estou nas orações por você,Sempre que se sentir mal,Ouve Uma música que você gosta. Tenta ter Uma conversa boa com seus amigos e se precisar,comigo tbm, Às vezes é disso que você precisa pra esquecer esse momento difícil.</p>
+   <div class="tiny mono">take it one day at a time</div>
+  </div>
+  <div>
+   <div class="photos">
+    <figure class="photo"><img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1168657003.jpg" alt="Ariana Grande em apresentação"><figcaption>ARIANA / YOUR VIBE</figcaption></figure>
+    <figure class="photo"><img src="https://www.hola.com/us/horizon/original_aspect_ratio/1aa74e58817b-ariana-grande-en-un-concierto.jpg" alt="Ariana Grande em apresentação"><figcaption>ARIANA</figcaption></figure>
+    <figure class="photo"><img src="https://media.allure.com/photos/5ddd4d23da953a0008facb3b/16%3A9/w_2560%2Cc_limit/ariana%2520grande%2520singing.jpg" alt="Ariana Grande cantando"><figcaption>ARIANA</figcaption></figure>
+   </div>
+   <p class="ariana-note">Eu sei que você ama a diva, por isso escolhi ela nesse site. 💜</p>
+  </div>
+ </div>
+</div>
+</section>
+
+<section class="end">
+<div class="wrap"><div class="end-box">
+ <h2>Melhoras<br>Júlia</h2>
+ <p>Não precisa ficar com medo. guarda esse site para aquele dia em que você precisar lembrar que tem alguém que está torcendo para que você melhore.</p>
+ <div class="icons">✦ 💜 ✦</div>
+</div></div>
+</section>
+
+<section class="chest-wrap">
+<div class="mono" style="margin-bottom:45px">✦</div>
+<button class="chest" id="chest" aria-label="Baú trancado"><small>✦</small></button>
+</section>
+
+<section class="secret" id="secret">
+<div class="wrap"><article class="secret-card">
+ <div class="mono">uma coisa que eu guardei aqui</div>
+ <h2>Enfim...</h2>
+ <p>Enfim,não sei se a gente deu certo,não sei se você adivinhou essa senha mas eu queria dizer nessa carta que eu espero mesmo que a gente der certo, eu só não entendo o jeito que você me trata assim,Sei que você é bastante recíproca mas a gente não precisa fazer isso dar certo mas precisamos saber se vai,A gente nem amigo,é oq parece é isso é bizarro,Eu te amo e não escondo isso,Eu amo mesmo você e se você está lendo isso, é pq você sabe disso,Eu quero que a gente vá pra frente,quero ser muito mais que amigo mas não sei se você mesma quer isso,Mas eu me sinto tão bem com você, só não entendo o seu jeito ainda, Não estamos realmente nos conhecendo mas sim parece que estamos nos afastamos,mas não estou disposto a desistir.</p>
+</article></div>
+</section>
+
+<footer></footer>
+
+<div class="modal" id="modal">
+ <div class="lockbox">
+  <h3>🔐</h3>
+  <input id="password" type="password" autocomplete="off" placeholder="insira a senha">
+  <button class="unlock" id="unlock">desbloquear</button>
+  <div class="error" id="error"></div>
+ </div>
+</div>
+
+<script>
+const modal=document.getElementById('modal');
+const chest=document.getElementById('chest');
+const input=document.getElementById('password');
+const error=document.getElementById('error');
+const secret=document.getElementById('secret');
+
+function normalize(v){return v.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-z0-9]/g,'')}
+const key=normalize('tv girl brooklyn 99 julia');
+
+chest.addEventListener('click',()=>{modal.classList.add('open');setTimeout(()=>input.focus(),120)});
+document.getElementById('unlock').addEventListener('click',unlock);
+input.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+
+function unlock(){
+ if(normalize(input.value)===key){
+   modal.classList.remove('open'); secret.classList.add('show');
+   setTimeout(()=>secret.scrollIntoView({behavior:'smooth',block:'start'}),120);
+   input.value=''; error.textContent='';
+ }else{
+   error.textContent='senha incorreta';
+   input.animate([{transform:'translateX(-5px)'},{transform:'translateX(5px)'},{transform:'translateX(0)'}],{duration:220});
+ }
+}
+</script>
+</body>
+</html>
